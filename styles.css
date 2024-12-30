@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --claroFuerte: #0159F5;
+    --claroOscuro: #2260CA;
+    --oscuroClaro: #355CA0;
+    --oscuroFuerte: #3B5075;
+    --negroClaro: #323B4B;
+    --negroClaroOscuro: #2B2E33;
+    --blanco: #ffff;
+    --negro: #0000; 
+}
+
+/* Estilos generales */
+.container {
+    width: 100%;
+    background-color: var(--blanco);
+}
+
+.menu {
+    width: 100%;
+    margin: auto;
+    height: 80px;
+    border: 1px solid var(--negroClaroOscuro);
+    background-color: var(--negroClaroOscuro);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+.logo {
+    text-decoration: none;
+    list-style: none;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3rem;
+    color: var(--blanco);
+    margin-bottom: 10px;
+}
+
+/* Estilo de las barras del menú hamburguesa */
+.menu-hamburguesa {
+    margin-top: 10px;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.barra {
+    width: 30px;
+    height: 4px;
+    background-color: var(--blanco);
+    margin: 5px 0;
+}
+
+/* Lista de menú */
+.menu--lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    border: 1px solid var(--negroClaroOscuro);
+}
+
+.menu--lista li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.lista--item a {
+    padding-right: 40px;
+    padding-top: 20px;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2rem;
+    color: var(--blanco);
+}
+
+/* Media Queries para adaptabilidad */
+
+/* Móviles (pantallas pequeñas) */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .logo {
+        padding-left: 20px;
+        padding-top: 10px;
+        font-size: 1.5rem;
+    }
+
+    .menu--lista {
+        display: none; /* Ocultar el menú por defecto */
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .lista--item {
+        padding-right: 20px;
+        font-size: 1.5rem;
+        padding-top: 10px;
+        text-align: right;
+    }
+
+    /* Mostrar el menú cuando el checkbox esté marcado */
+    #menu-toggle:checked + .menu-hamburguesa + .menu--lista {
+        display: flex; /* Mostrar el menú */
+    }
+
+    /* Ocultar el checkbox al estar marcado */
+    #menu-toggle {
+        display: none; /* Ocultar el checkbox */
+    }
+
+    /* Mostrar el botón hamburguesa en pantallas pequeñas */
+    .menu-hamburguesa {
+        display: flex;
+    }
+}
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 1024px) {
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .lista--item {
+        font-size: 1.8rem;
+    }
+}
+
+/* Escritorios (pantallas grandes) */
+@media (min-width: 1025px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    .lista--item {
+        font-size: 2rem;
+    }
+}
