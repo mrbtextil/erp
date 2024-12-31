@@ -13,8 +13,76 @@
     --oscuroFuerte: #3B5075;
     --negroClaro: #323B4B;
     --negroClaroOscuro: #2B2E33;
+    --alerta: #F53400;
+    --seguro: #85F500;
     --blanco: #ffff;
     --negro: #0000; 
+}
+
+.title{
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.subtitulo{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2rem;
+}
+.texto{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3rem;
+}
+
+.button{
+    border: 3px solid var(--oscuroClaro);
+    border-radius: 9px;
+    margin-bottom: 20px;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+.button2 {
+    width: 100px;
+    height: 40px;
+    background-color: var(--oscuroFuerte); /* Color de fondo */
+    color: white; /* Color del texto */
+    border: 2px solid var(--alerta);
+    padding: 5px 3px; /* Espaciado interno */
+    text-align: center; /* Centrado del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Para que se ajuste al contenido */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: auto; /* Espaciado externo */
+    margin-bottom: 1px;
+    cursor: pointer; /* Cursor en forma de mano */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: all 0.3s; /* Transición para el cambio de color */
+}
+
+.button2:hover{
+    background-color: var(--claroOscuro);
+    border: 2px solid var(--seguro);
+    box-shadow: 0px 2px 9px var(--negroClaroOscuro);
+}
+
+
+.img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: var(--negroClaro);
 }
 
 /* Estilos generales */
@@ -42,13 +110,9 @@
 .logo {
     text-decoration: none;
     list-style: none;
-    font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 3rem;
     color: var(--blanco);
     margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 /* Estilo de las barras del menú hamburguesa */
@@ -85,26 +149,67 @@
     padding-top: 20px;
     text-decoration: none;
     list-style: none;
-    font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 2rem;
     color: var(--blanco);
 }
 
+.banner{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    height: 700px;
+    border: 1px solid var(--negroClaroOscuro);
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    width: 60%;
+    padding: 40px;
+    margin: auto;
+    margin-top: 25px;
+    height: 500px;
+    border: 1px solid var(--negroClaroOscuro);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card h1{
+    margin-bottom: 20px;
+    
+}
+.parrafo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.parrafo h2{
+    margin-bottom: 50px;
+}
+
+.parrafo p{
+    width: 80%;
+}
 /* Media Queries para adaptabilidad */
 
 /* Móviles (pantallas pequeñas) */
 @media (max-width: 768px) {
-    .menu {
+    .banner{
         flex-direction: column;
+    }
+    .menu {
         height: auto;
         padding: 10px 0;
+        justify-content: space-around;
     }
+    
 
     .logo {
-        padding-left: 20px;
+        padding-left: 10px;
         padding-top: 10px;
         font-size: 1.5rem;
     }
@@ -112,9 +217,9 @@
     .menu--lista {
         display: none; /* Ocultar el menú por defecto */
         flex-direction: column;
-        width: 100%;
+        width: 80%;
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 60px;
     }
 
     .lista--item {
@@ -137,6 +242,7 @@
     /* Mostrar el botón hamburguesa en pantallas pequeñas */
     .menu-hamburguesa {
         display: flex;
+        margin-left: 40px;
     }
 }
 
