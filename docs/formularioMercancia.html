@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Formulario de Ingreso de Mercancías</title>
+ 
+</head>
+<body>
+
+<div class="container">
+
+<div class="login-container">
+    <h1 class="title">Ingreso de Mercancías</h1>
+    <form action="/submit" method="POST">
+        <label class="texto" for="tela">Tela</label>
+        <input type="text" id="tela" name="tela" placeholder="Ingrese el tipo de tela" required>
+
+        <label class="texto" for="color">Color</label>
+        <input type="text" id="color" name="color" placeholder="Ingrese el color" required>
+
+        <label class="texto" for="metros">Metros</label>
+        <input type="number" id="metros" name="metros" placeholder="Ingrese la cantidad de metros" required min="1">
+
+        <button class="button" type="submit">Registrar Mercancía</button>
+    </form>
+</div>
+
+<div class="volver">
+    <button class="button" type="submit"><a href="./logistica.html">volver</a></button>
+</div>
+</div>
+
+</body>
+</html>
