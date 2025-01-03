@@ -42,7 +42,7 @@
     font-size: 1.3rem;
 }
 
-button{
+.button{
     background: var(--seguro);
     color:#fff;
     border:none;
@@ -54,11 +54,11 @@ button{
     transition:800ms ease all;
     outline:none;
   }
-  button:hover{
+.button:hover{
     background:#fff;
     color:var(--seguro);
   }
-  button:before,button:after{
+.button:before,button:after{
     content:'';
     position:absolute;
     top:0;
@@ -68,16 +68,21 @@ button{
     background: var(--seguro);
     transition:400ms ease all;
   }
-  button:after{
+.button:after{
     right:inherit;
     top:inherit;
     left:0;
     bottom:0;
   }
-  button:hover:before,button:hover:after{
+.button:hover:before,button:hover:after{
     width:100%;
     transition:800ms ease all;
   }
+
+.btn-delete{
+   background: var(--alerta);
+   font-size: 1rem;
+}
 
 .img{
     width: 130px;
@@ -150,6 +155,11 @@ button{
     text-decoration: none;
     list-style: none;
     color: var(--blanco);
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.3rem;
 }
 
 .cards{
@@ -166,7 +176,7 @@ button{
     width: 90%;
     margin: auto;
     margin-top: 10px;
-    height: 700px;
+    height: 600px;
     border: 1px solid var(--negroClaroOscuro);
     display: flex;
     flex-direction: column;
@@ -363,6 +373,31 @@ input[type="text"], input[type="password"], input[type="number"] {
 .volver{
     margin: 120px;
 }
+
+.container-table{
+    margin: 5px;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+}
+table thead{
+    margin: 5px;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
 /* Media Queries para adaptabilidad */
 
 /* Móviles (pantallas pequeñas) */
