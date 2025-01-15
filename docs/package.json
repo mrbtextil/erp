@@ -1,0 +1,21 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "set user:1000 \"user\"\r # crea un valor\r set name \"some\"\r # mostrar info\r get user:2000\r # actualizar valor\r set name \"otro\"\r # mostrar las llaves \r keys user:*\r # si existe \r exists user:1000\r # renombrar llave de 1000 a 2000\r rename user:1000 user:2000\r # muestra el tipo de dato\r type user:2000\r # agregar mas informacion \r append user:2000 \" otro valor\"\r # cantidad de caracteres \r strlen user:2000\r # aumentar con incr y decrementa con decr \r incr user \r # crea o actualiza clave valor \r hset user:20 nombre \"a\" edad \"1\"\r # hget obtener valor \r hget user:20 nombre\r # lpush anade un elemento al principio\r lpush lista \"a\" \"b\" \"c\"\r # rpush anade un nuevo elemento al final de la lista\r rpush lista \"d\"\r # lrange lista obtiene un elemento o varios \r lrange lista 0 -1\r # sadd agregar uno o mas elemetos sin repatir\r sadd lista2 \"a\" \"b\" \"c\" \r # mostrar lista de elemetos\r smembers lista2\r # eliminar un elemento\r srem lista2 \"a\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "response-time": "^2.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "redis": "^4.7.0"
+  }
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <title>Tabla de Telas</title>
+    <script src="./inventario.js"></script>
 </head>
 <body>
 
@@ -29,24 +30,21 @@
 <h1 class="title">Tabla de Telas</h1>
 <div class="container-table">
 
-<table class="title" id="tabla-telas">
-    <thead>
-        <tr>
-            <th class="texto">Tela <input type="text" id="filtro-tela" onkeyup="filtrarTabla()" placeholder="Filtrar por tela"></th>
-            <th class="texto">Color <input type="text" id="filtro-color" onkeyup="filtrarTabla()" placeholder="Filtrar por color"></th>
-            <th class="texto">Metros <input type="text" id="filtro-metros" onkeyup="filtrarTabla()" placeholder="Filtrar por metros"></th>
-            <th class="texto">Eliminar</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="texto">Algodón</td>
-            <td class="texto">Rojo</td>
-            <td class="texto">10</td>
-            <td><button class="button btn-delete">Eliminar</button></td>
-        </tr>
-    </tbody>
-</table>
+    <table class="title" id="tabla-telas">
+    
+        <thead>
+            <tr>
+                <th class="texto">Tela <input type="text" id="filtro-tela" onkeyup="filtrarTabla()" placeholder="Filtrar por tela"></th>
+                <th class="texto">Color <input type="text" id="filtro-color" onkeyup="filtrarTabla()" placeholder="Filtrar por color"></th>
+                <th class="texto">Metros <input type="text" id="filtro-metros" onkeyup="filtrarTabla()" placeholder="Filtrar por metros"></th>
+                <th class="texto">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-body">
+            <!-- Las filas serán insertadas dinámicamente aquí -->
+        </tbody>
+    </table>
+    
 </div>
 
 </body>
